@@ -1,0 +1,315 @@
+/* Cafe Espresso - Modern SaaS Admin CSS */
+
+/* 1. Layout Structure */
+.admin-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+  background-color: #F8F9FA;
+  color: #2B2521;
+}
+
+/* 2. Admin Sidebar Component */
+.admin-sidebar {
+  background-color: #0F1E1A; /* Premium deep dark forest green */
+  color: #FDFBF7;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  border-right: 1px solid rgba(253, 251, 247, 0.05);
+}
+
+.admin-sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  padding: 0 10px;
+}
+
+.admin-sidebar-header i {
+  color: #C08246; /* Gold icon */
+  font-size: 1.5rem;
+}
+
+.admin-sidebar-header h3 {
+  font-family: 'Playfair Display', serif;
+  color: #FDFBF7;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.admin-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.admin-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #a3b3ac; /* Soft green-gray description */
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.admin-menu-link i {
+  font-size: 1.1rem;
+  width: 20px;
+}
+
+.admin-menu-link:hover,
+.admin-menu-link.active {
+  background-color: rgba(253, 251, 247, 0.06);
+  color: #C08246; /* Gold highlights */
+}
+
+.admin-menu-footer {
+  margin-top: auto;
+  border-top: 1px solid rgba(253, 251, 247, 0.05);
+  padding-top: 20px;
+}
+
+/* 3. Main Workspace Area */
+.admin-main {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.admin-navbar {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid rgba(44, 26, 17, 0.08);
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.admin-navbar-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.admin-navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.admin-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.admin-user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #C08246;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.admin-content-body {
+  padding: 30px;
+  flex-grow: 1;
+}
+
+/* 4. Analytical Metric Cards */
+.metrics-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.metric-card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid rgba(44, 26, 17, 0.05);
+  box-shadow: 0 4px 6px -1px rgba(44, 26, 17, 0.02);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metric-info h5 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #8E847C;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.metric-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2C1A11;
+}
+
+.metric-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: rgba(192, 130, 70, 0.1);
+  color: #C08246;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.metric-card.alert-card .metric-icon-box {
+  background-color: rgba(198, 40, 40, 0.1);
+  color: #C62828;
+}
+
+/* 5. Analytical Graph Panel */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.chart-card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid rgba(44, 26, 17, 0.05);
+  box-shadow: 0 4px 6px -1px rgba(44, 26, 17, 0.02);
+  min-height: 380px;
+}
+
+.chart-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chart-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.chart-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+
+/* 6. List Management Actions Panels */
+.admin-card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid rgba(44, 26, 17, 0.05);
+  box-shadow: 0 4px 6px -1px rgba(44, 26, 17, 0.02);
+  margin-bottom: 30px;
+}
+
+.admin-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.admin-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Form Styles inside Admin */
+.admin-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.image-preview-box {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1;
+  border: 2px dashed rgba(44, 26, 17, 0.15);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 8px;
+  background-color: #F8F9FA;
+}
+
+.image-preview-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Status Selectors */
+.status-select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(44, 26, 17, 0.15);
+  font-size: 0.85rem;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1200px) {
+  .metrics-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+  .admin-sidebar {
+    display: none; /* In production, you would add a mobile hamburger menu for this sidebar */
+  }
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .metrics-row {
+    grid-template-columns: 1fr;
+  }
+  .admin-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .admin-form-row {
+    grid-template-columns: 1fr;
+  }
+}

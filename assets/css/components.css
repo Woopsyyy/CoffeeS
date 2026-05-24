@@ -1,0 +1,467 @@
+/* Cafe Espresso - Components System */
+
+/* ==========================================================================
+   1. BUTTON VARIATIONS
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border-radius: var(--border-radius-full);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.btn-primary {
+  background-color: var(--accent-gold);
+  color: var(--cream-light);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(192, 130, 70, 0.2);
+}
+
+.btn-secondary {
+  background-color: var(--coffee-dark);
+  color: var(--cream-light);
+}
+
+.btn-secondary:hover {
+  background-color: var(--coffee-medium);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(44, 26, 17, 0.2);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--coffee-dark);
+  color: var(--coffee-dark);
+}
+
+.btn-outline:hover {
+  background-color: var(--coffee-dark);
+  color: var(--cream-light);
+  transform: translateY(-2px);
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  color: var(--coffee-dark);
+  font-weight: 500;
+}
+
+.btn-text:hover {
+  color: var(--accent-gold);
+}
+
+.btn-sm {
+  padding: 8px 18px;
+  font-size: 0.8rem;
+}
+
+.btn-block {
+  display: flex;
+  width: 100%;
+}
+
+/* ==========================================================================
+   2. BADGES & LABELS
+   ========================================================================== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  font-size: 0.725rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: var(--border-radius-sm);
+}
+
+.badge-success { background-color: rgba(46, 125, 50, 0.1); color: var(--success); }
+.badge-warning { background-color: rgba(239, 108, 0, 0.1); color: var(--warning); }
+.badge-danger { background-color: rgba(198, 40, 40, 0.1); color: var(--danger); }
+.badge-primary { background-color: rgba(192, 130, 70, 0.1); color: var(--accent-gold); }
+
+/* ==========================================================================
+   3. PRODUCT CARDS (Cozy Luxury Cafe Style)
+   ========================================================================== */
+.product-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+  border: 1px solid rgba(44, 26, 17, 0.04);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(192, 130, 70, 0.15);
+}
+
+.product-card-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  margin-bottom: var(--spacing-sm);
+  background-color: var(--cream-dark);
+}
+
+.product-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.product-card:hover .product-card-img {
+  transform: scale(1.06);
+}
+
+.product-card-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(15, 30, 26, 0.85);
+  backdrop-filter: blur(4px);
+  color: var(--cream-light);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--border-radius-sm);
+  letter-spacing: 0.5px;
+}
+
+.product-card-fav {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(253, 251, 247, 0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--coffee-dark);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+}
+
+.product-card-fav:hover {
+  background-color: var(--accent-gold);
+  color: var(--white);
+}
+
+.product-card-category {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.product-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--coffee-dark);
+  margin-bottom: 8px;
+}
+
+.product-card-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: var(--spacing-sm);
+  flex-grow: 1;
+}
+
+.product-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(44, 26, 17, 0.05);
+  padding-top: var(--spacing-sm);
+  margin-top: auto;
+}
+
+.product-card-price {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--coffee-dark);
+}
+
+.product-card-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--coffee-dark);
+  color: var(--cream-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.product-card-btn:hover {
+  background-color: var(--accent-gold);
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   4. FORM ELEMENTS & INPUTS
+   ========================================================================== */
+.form-group {
+  margin-bottom: var(--spacing-md);
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--coffee-dark);
+  margin-bottom: 6px;
+}
+
+.form-control {
+  width: 100%;
+  background-color: var(--white);
+  border: 1px solid rgba(44, 26, 17, 0.15);
+  border-radius: var(--border-radius-md);
+  padding: 14px var(--spacing-md);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px rgba(192, 130, 70, 0.15);
+}
+
+/* Options Select for Custom Sugar Controls */
+.sugar-picker {
+  display: flex;
+  gap: 8px;
+  margin-bottom: var(--spacing-md);
+}
+
+.sugar-option {
+  flex-grow: 1;
+  position: relative;
+}
+
+.sugar-option input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.sugar-option-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid rgba(44, 26, 17, 0.15);
+  border-radius: var(--border-radius-md);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background-color: var(--white);
+}
+
+.sugar-option input:checked + .sugar-option-label {
+  border-color: var(--accent-gold);
+  background-color: rgba(192, 130, 70, 0.08);
+  color: var(--accent-gold-hover);
+}
+
+/* ==========================================================================
+   5. MODALS
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 30, 26, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  background-color: var(--cream-light);
+  border-radius: var(--border-radius-lg);
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(44, 26, 17, 0.08);
+  transform: scale(0.9);
+  transition: transform var(--transition-normal);
+  position: relative;
+}
+
+.modal-overlay.open .modal-card {
+  transform: scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(44, 26, 17, 0.05);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--coffee-dark);
+  font-weight: bold;
+  z-index: 10;
+  transition: background-color var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  background-color: rgba(44, 26, 17, 0.15);
+}
+
+/* ==========================================================================
+   6. TABLES
+   ========================================================================== */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  background-color: var(--cream-dark);
+  color: var(--coffee-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(44, 26, 17, 0.08);
+}
+
+.table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(44, 26, 17, 0.05);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background-color: var(--white);
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   7. FLASHTOAST ALERTS
+   ========================================================================== */
+.alert-container {
+  position: fixed;
+  top: 100px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.alert-toast {
+  pointer-events: auto;
+  min-width: 320px;
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  padding: 16px 20px;
+  box-shadow: var(--shadow-lg);
+  border-left: 5px solid var(--accent-gold);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: slideInToast 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all 0.3s;
+}
+
+.alert-toast.alert-success { border-left-color: var(--success); }
+.alert-toast.alert-error { border-left-color: var(--danger); }
+.alert-toast.alert-info { border-left-color: var(--accent-gold); }
+
+.alert-toast i {
+  font-size: 1.25rem;
+}
+.alert-success i { color: var(--success); }
+.alert-error i { color: var(--danger); }
+.alert-info i { color: var(--accent-gold); }
+
+.alert-toast-content {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  flex-grow: 1;
+}
+
+.alert-toast-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+@keyframes slideInToast {
+  from { transform: translateX(120%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
