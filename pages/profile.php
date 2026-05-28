@@ -115,11 +115,12 @@ function getOrderItemsList($orderId) {
                     </div>
                     <h3 class="color-coffee font-bold"><?php echo sanitize($currentUser['username']); ?></h3>
                     <span class="badge badge-primary mt-1" style="font-size:0.65rem;"><?php echo ucfirst(sanitize($currentUser['role'])); ?> Account</span>
-                    <?php if (isAdmin()): ?>
-                        <div class="mt-3">
+                    <div class="mt-3" style="display:flex; flex-direction:column; gap:8px;">
+                        <?php if (isAdmin()): ?>
                             <a href="<?php echo BASE_URL; ?>/admin/dashboard.php" class="btn btn-primary btn-block btn-sm" style="background:var(--accent-gold); border-color:var(--accent-gold); color:var(--white); font-weight:600; display:inline-flex; align-items:center; justify-content:center; gap:6px; padding:10px;"><i class="fa-solid fa-user-shield"></i> Go to Admin Panel</a>
-                        </div>
-                    <?php endif; ?>
+                        <?php endif; ?>
+                        <a href="<?php echo BASE_URL; ?>/pages/login.php?logout=true" class="btn btn-outline-danger btn-block btn-sm" style="font-weight:600; display:inline-flex; align-items:center; justify-content:center; gap:6px; padding:10px;"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
+                    </div>
                 </div>
 
                 <?php if (!empty($updateError)): ?>

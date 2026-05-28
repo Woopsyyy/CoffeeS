@@ -55,6 +55,19 @@
   transform: translateY(-2px);
 }
 
+.btn-outline-danger {
+  background-color: transparent;
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.btn-outline-danger:hover {
+  background-color: var(--danger);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(198, 40, 40, 0.15);
+}
+
 .btn-text {
   background: none;
   border: none;
